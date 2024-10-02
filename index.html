@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="start-container">
+        <h1>Quiz App</h1>
+        <p>Başarılar! Eğlenceli bir quiz deneyimi sizi bekliyor!</p>
+        <button id="start-button" onclick="showQuizGuide()">Başla</button>
+    </div>
+
+    <div id="quiz-guide" style="display: none;">
+        <h2>Quiz Kılavuzu</h2>
+        <ul>
+            <li>Bu uygulamada 10 soruluk bir quiz testi yapılacaktır.</li>
+            <li>Her soru 30 saniye boyunca ekranda kalacak ve ilk 10 saniye boyunca cevap seçeneklerine
+                tıklanamayacaktır.
+            </li>
+            <li>Cevabınızı işaretledikten sonra sonraki soruya geçebilirsiniz.</li>
+            <li>Doğru yanıt yeşil renkte, yanlış yanıt kırmızı renkte gösterilecektir.</li>
+        </ul>
+
+        <div class="button-container">
+            <button id="begin-quiz" onclick="startQuiz()">Başla</button>
+            <button id="exit" onclick="exitQuiz()">Çıkış</button>
+        </div>
+    </div>
+
+
+    <div id="quiz-container" style="display: none;">
+        <div id="question-count" style="text-align: center; font-weight: bold; margin-bottom: 10px;"></div>
+        <div id="time"></div>
+        <div id="question"></div>
+        <div id="options"></div>
+        <button id="next" onclick="nextQuestion()" disabled>Sonraki Soru</button>
+    </div>
+
+    <div id="result" style="display: none;">
+        <h2>Sonuçlar</h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

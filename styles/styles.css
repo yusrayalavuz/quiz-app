@@ -1,0 +1,239 @@
+@charset "UTF-8";
+body {
+  font-family: "Quicksand", sans-serif;
+  background-image: url("../New-blog-graphic.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #261049;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#begin-quiz,
+#start-button {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+#begin-quiz:hover,
+#start-button:hover {
+  background-color: #1e7e34;
+}
+#begin-quiz:disabled,
+#start-button:disabled {
+  background-color: #34ce57;
+  cursor: not-allowed;
+}
+
+#next {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin: 35px;
+}
+#next:hover {
+  background-color: #1e7e34;
+}
+#next:disabled {
+  background-color: #34ce57;
+  cursor: not-allowed;
+}
+
+#exit {
+  background-color: #dc3545;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+#exit:hover {
+  background-color: #bd2130;
+}
+#exit:disabled {
+  background-color: #e4606d;
+  cursor: not-allowed;
+}
+
+#start-container,
+#quiz-guide,
+#result {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 5px solid #261049;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+#quiz-guide ul {
+  padding-left: 20px;
+  margin: 0;
+  text-align: left;
+}
+#quiz-guide li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+#quiz-guide .button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+#quiz-guide button {
+  margin: 0 10px;
+}
+
+#quiz-container {
+  margin: 0 20px; /* Sağ ve sola 20px margin ekle */
+}
+
+#question {
+  text-align: center;
+  margin: 80px 0;
+  background-color: #c8bbdb;
+  height: 60px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #261049;
+}
+
+#options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+}
+
+#options button {
+  height: 60px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #e9d47f;
+  color: #261049;
+}
+#options button.correct {
+  background-color: #28a745;
+  color: #ffffff;
+}
+#options button.incorrect {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+#time {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background-color: #261049;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #ffffff;
+}
+
+#result {
+  margin: 20px;
+}
+
+#result table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+#result th,
+#result td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#result th {
+  background-color: #f2f2f2;
+}
+
+#result tr:hover {
+  background-color: #f1f1f1;
+}
+
+.total-score {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.empty-answer {
+  background-color: lightblue;
+}
+
+.correct-answer {
+  background-color: lightgreen;
+}
+
+.wrong-answer {
+  background-color: lightcoral;
+}
+
+.result-message {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.result-message.green {
+  color: green;
+}
+
+.result-message.orange {
+  color: orange;
+}
+
+.result-message.red {
+  color: red;
+}
+
+#quiz-container {
+  margin: 0 20px; /* Sağ ve sola 20px margin ekle */
+}
+
+@media (max-width: 768px) {
+  /* 768px altındaki ekranlar için */
+  #options {
+    display: flex;
+    flex-direction: column; /* Seçenekleri dikey diz */
+  }
+  #options button {
+    width: 100%; /* Butonların genişliğini %100 yap */
+    margin-bottom: 10px; /* Butonlar arasında boşluk ekle */
+  }
+  #question {
+    min-height: 100px; /* Soru alanı için minimum yükseklik belirle */
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=styles.css.map */
